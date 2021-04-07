@@ -1,0 +1,36 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "slug": "dashboard",
+      "icon": "desktop",
+      "tag": "2",
+      "tagcustom": "badge badge-light-danger badge-pill badge-round 50"
+    },
+    {
+      "url": "/admin/users",
+      "name": "Users",
+      "slug": "users",
+      "icon": "users"
+    },
+    {
+      "url": "/admin/categories",
+      "name": "Categories",
+      "slug": "categories",
+      "icon": "users"
+    },
+    {
+      "url": "/admin/products",
+      "name": "Products",
+      "slug": "products",
+      "icon": "users"
+    },
+    {
+      "url": "/admin/settings",
+      "name": "Settings",
+      "slug": "settings",
+      "icon": "users"
+    }
+  ]
+}

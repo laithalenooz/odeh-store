@@ -1,0 +1,12 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "slug": "dashboard",
+      "icon": "desktop",
+      "tag": 2,
+      "dropdown": "1"
+    }
+  ]
+}

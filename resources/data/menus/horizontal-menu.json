@@ -1,0 +1,39 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Dashboard",
+      "slug": "dashboard",
+      "icon": "desktop",
+      "dropdown": "1"
+    },
+    {
+      "url": "/admin/users",
+      "name": "Users",
+      "slug": "users",
+      "icon": "bx bx-user",
+      "dropdown": "1"
+    },
+    {
+      "url": "/admin/categories",
+      "name": "Categories",
+      "slug": "categories",
+      "icon": "bx bx-user",
+      "dropdown": "1"
+    },
+    {
+      "url": "/admin/products",
+      "name": "Products",
+      "slug": "products",
+      "icon": "bx bx-user",
+      "dropdown": "1"
+    },
+    {
+      "url": "/admin/settings",
+      "name": "Settings",
+      "slug": "Settings",
+      "icon": "bx bx-user",
+      "dropdown": "1"
+    }
+  ]
+}
