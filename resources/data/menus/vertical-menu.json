@@ -30,7 +30,7 @@
       "url": "/admin/settings",
       "name": "Settings",
       "slug": "settings",
-      "icon": "users"
+      "icon": "settings"
     }
   ]
 }

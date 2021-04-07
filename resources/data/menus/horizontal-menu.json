@@ -32,7 +32,7 @@
       "url": "/admin/settings",
       "name": "Settings",
       "slug": "Settings",
-      "icon": "bx bx-user",
+      "icon": "bx bx-settings",
       "dropdown": "1"
     }
   ]
