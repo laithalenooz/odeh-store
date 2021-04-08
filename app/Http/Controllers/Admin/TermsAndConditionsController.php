@@ -79,16 +79,16 @@ class TermsAndConditionsController extends Controller
         $data['privacy'] = $termsandcondition->privacy;
         $termsandcondition->update($data);
         return redirect()->route('termsandconditions.index');
-    } elseif ($data['terms'] == null)
-    {
-        $data['terms'] = $termsandcondition->terms;
-        $termsandcondition->update($data);
-        return redirect()->route('termsandconditions.index');
-    } else 
-    {
-        $termsandcondition->update($data);
-        return redirect()->route('termsandconditions.index');
-    }
+        } elseif ($data['terms'] == null)
+        {
+            $data['terms'] = $termsandcondition->terms;
+            $termsandcondition->update($data);
+            return redirect()->route('termsandconditions.index');
+        } else 
+        {
+            $termsandcondition->update($data);
+            return redirect()->route('termsandconditions.index');
+       }
     }
 
     /**
