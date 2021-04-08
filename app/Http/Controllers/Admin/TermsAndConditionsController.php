@@ -94,12 +94,12 @@ class TermsAndConditionsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\TermsAndConditions  $TermsAndCondition
+     * @param  \App\Models\PrivacyAndTerms  $PrivacyAndTerm
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PrivacyAndTerms $PrivacyAndTerm)
+    public function destroy(PrivacyAndTerms $termsandcondition)
     {
-        $PrivacyAndTerm->delete();
+        $termsandcondition->delete();
         return back();
     }
 }
