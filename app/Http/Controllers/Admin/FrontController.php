@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
-    //index
-    public function index(){
-        return view('admin.pages.dashboard-ecommerce');
-      }
+  //index
+  public function index()
+  {
+    return view('admin.pages.dashboard-ecommerce');
+  }
 }
