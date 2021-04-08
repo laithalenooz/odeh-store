@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StarterKitController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\Admin\FrontController;
 use App\Http\Controllers\Admin\UserController;
