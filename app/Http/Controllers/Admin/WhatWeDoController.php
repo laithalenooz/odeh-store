@@ -8,7 +8,7 @@ use App\Models\SiteSettings;
 use App\Http\Requests\StoreSettingsRequest;
 use Illuminate\Support\Facades\Storage;
 
-class SiteSettingsController extends Controller
+class WhatWeDoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class SiteSettingsController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.settings.index')->with('settings', SiteSettings::paginate(20));
+        return view('admin.pages.whatwedo.index')->with('whatwedos', SiteSettings::paginate(20));
     }
 
     /**
@@ -27,7 +27,7 @@ class SiteSettingsController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.settings.create');
+        return view('admin.pages.whatwedo.create');
     }
 
     /**
@@ -58,12 +58,12 @@ class SiteSettingsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SiteSettings  $setting 
+     * @param  \App\Models\SiteSettings  $whatwedo 
      * @return \Illuminate\Http\Response
      */
-    public function edit(SiteSettings $setting)
+    public function edit(SiteSettings $whatwedo)
     {
-        return view('admin.pages.settings.edit',compact('setting'));
+        return view('admin.pages.whatwedo.edit',compact('whatwedo'));
     }
 
     /**
@@ -83,18 +83,18 @@ class SiteSettingsController extends Controller
         $data['image'] = Storage::disk('public')->put('settings', $data['image']);
       }
       $setting->update($data);
-      return redirect()->route('settings.index');
+      return redirect()->route('whatwedo.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SiteSettings  $setting
+     * @param  \App\Models\SiteSettings  $whatwedo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SiteSettings $setting)
+    public function destroy(SiteSettings $whatwedo)
     {
-        $setting->delete();
+        $whatwedo->delete();
         return back();
     }
 }

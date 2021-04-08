@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::xQSIvfKU35sTPghz',
+            '_route' => 'generated::7bMWdLjO97XSldvh',
           ),
           1 => NULL,
           2 => 
@@ -121,7 +121,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::RaNQNFZ23080K3PX',
+            '_route' => 'generated::TO0S7TkTvjXDscfT',
           ),
           1 => NULL,
           2 => 
@@ -176,7 +176,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::efqt37DGOhOvGzJg',
+            '_route' => 'generated::or7xQn9WR1DsTysq',
           ),
           1 => NULL,
           2 => 
@@ -267,7 +267,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::o0n2pTO7Dfqvs0G8',
+            '_route' => 'generated::m2VyvCBGJJor06KA',
           ),
           1 => NULL,
           2 => 
@@ -562,13 +562,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/settings' => 
+      '/admin/whatwedo' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'settings.index',
+            '_route' => 'whatwedo.index',
           ),
           1 => NULL,
           2 => 
@@ -585,7 +585,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'settings.store',
+            '_route' => 'whatwedo.store',
           ),
           1 => NULL,
           2 => 
@@ -598,13 +598,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/admin/settings/create' => 
+      '/admin/whatwedo/create' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'settings.create',
+            '_route' => 'whatwedo.create',
           ),
           1 => NULL,
           2 => 
@@ -733,7 +733,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/(?|c(?|lockwork/([^/]++)(*:42)|ache/([^/]++)(?:/([^/]++))?(*:76))|telescope/([^/]++)(*:102))|/lang/([^/]++)(*:125)|/password/reset/([^/]++)(*:157)|/email/verify/([^/]++)/([^/]++)(*:196)|/admin/(?|users/([^/]++)(?|(*:231)|/edit(*:244)|(*:252))|categories/([^/]++)(?|(*:283)|/edit(*:296)|(*:304))|products/([^/]++)(?|(*:333)|/edit(*:346)|(*:354))|settings/([^/]++)(?|(*:383)|/edit(*:396)|(*:404))|termsandconditions/([^/]++)(?|(*:443)|/edit(*:456)|(*:464))|brands/([^/]++)(?|(*:491)|/edit(*:504)|(*:512))))/?$}sDu',
+      0 => '{^(?|/_debugbar/(?|c(?|lockwork/([^/]++)(*:42)|ache/([^/]++)(?:/([^/]++))?(*:76))|telescope/([^/]++)(*:102))|/lang/([^/]++)(*:125)|/password/reset/([^/]++)(*:157)|/email/verify/([^/]++)/([^/]++)(*:196)|/admin/(?|users/([^/]++)(?|(*:231)|/edit(*:244)|(*:252))|categories/([^/]++)(?|(*:283)|/edit(*:296)|(*:304))|products/([^/]++)(?|(*:333)|/edit(*:346)|(*:354))|whatwedo/([^/]++)(?|(*:383)|/edit(*:396)|(*:404))|termsandconditions/([^/]++)(?|(*:443)|/edit(*:456)|(*:464))|brands/([^/]++)(?|(*:491)|/edit(*:504)|(*:512))))/?$}sDu',
     ),
     3 => 
     array (
@@ -1147,11 +1147,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'settings.show',
+            '_route' => 'whatwedo.show',
           ),
           1 => 
           array (
-            0 => 'setting',
+            0 => 'whatwedo',
           ),
           2 => 
           array (
@@ -1170,11 +1170,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'settings.edit',
+            '_route' => 'whatwedo.edit',
           ),
           1 => 
           array (
-            0 => 'setting',
+            0 => 'whatwedo',
           ),
           2 => 
           array (
@@ -1193,11 +1193,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'settings.update',
+            '_route' => 'whatwedo.update',
           ),
           1 => 
           array (
-            0 => 'setting',
+            0 => 'whatwedo',
           ),
           2 => 
           array (
@@ -1213,11 +1213,11 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'settings.destroy',
+            '_route' => 'whatwedo.destroy',
           ),
           1 => 
           array (
-            0 => 'setting',
+            0 => 'whatwedo',
           ),
           2 => 
           array (
@@ -1641,7 +1641,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::xQSIvfKU35sTPghz' => 
+    'generated::7bMWdLjO97XSldvh' => 
     array (
       'methods' => 
       array (
@@ -1656,15 +1656,15 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:api',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":291:{@ZVc1jAZpdFzUbahQWOozl9KngN2keqq3vLX5Lm5TXVs=.a:5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":291:{@C9HE1Vi9YOG/fftUCuEP8gRhxQiT4ikYsnH0nJO5aDc=.a:5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000222826550000000039a438bd";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000008619d65000000006cbf745f";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::xQSIvfKU35sTPghz',
+        'as' => 'generated::7bMWdLjO97XSldvh',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1751,7 +1751,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::RaNQNFZ23080K3PX' => 
+    'generated::TO0S7TkTvjXDscfT' => 
     array (
       'methods' => 
       array (
@@ -1771,7 +1771,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::RaNQNFZ23080K3PX',
+        'as' => 'generated::TO0S7TkTvjXDscfT',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1857,7 +1857,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::efqt37DGOhOvGzJg' => 
+    'generated::or7xQn9WR1DsTysq' => 
     array (
       'methods' => 
       array (
@@ -1877,7 +1877,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::efqt37DGOhOvGzJg',
+        'as' => 'generated::or7xQn9WR1DsTysq',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2070,7 +2070,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::o0n2pTO7Dfqvs0G8' => 
+    'generated::m2VyvCBGJJor06KA' => 
     array (
       'methods' => 
       array (
@@ -2090,7 +2090,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::o0n2pTO7Dfqvs0G8',
+        'as' => 'generated::m2VyvCBGJJor06KA',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3126,14 +3126,14 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'settings.index' => 
+    'whatwedo.index' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'admin/settings',
+      'uri' => 'admin/whatwedo',
       'action' => 
       array (
         'middleware' => 
@@ -3141,9 +3141,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:admin',
         ),
-        'as' => 'settings.index',
-        'uses' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@index',
-        'controller' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@index',
+        'as' => 'whatwedo.index',
+        'uses' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@index',
+        'controller' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@index',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 
@@ -3163,14 +3163,14 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'settings.create' => 
+    'whatwedo.create' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'admin/settings/create',
+      'uri' => 'admin/whatwedo/create',
       'action' => 
       array (
         'middleware' => 
@@ -3178,9 +3178,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:admin',
         ),
-        'as' => 'settings.create',
-        'uses' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@create',
-        'controller' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@create',
+        'as' => 'whatwedo.create',
+        'uses' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@create',
+        'controller' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@create',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 
@@ -3200,13 +3200,13 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'settings.store' => 
+    'whatwedo.store' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'admin/settings',
+      'uri' => 'admin/whatwedo',
       'action' => 
       array (
         'middleware' => 
@@ -3214,9 +3214,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:admin',
         ),
-        'as' => 'settings.store',
-        'uses' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@store',
-        'controller' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@store',
+        'as' => 'whatwedo.store',
+        'uses' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@store',
+        'controller' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@store',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 
@@ -3236,14 +3236,14 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'settings.show' => 
+    'whatwedo.show' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'admin/settings/{setting}',
+      'uri' => 'admin/whatwedo/{whatwedo}',
       'action' => 
       array (
         'middleware' => 
@@ -3251,9 +3251,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:admin',
         ),
-        'as' => 'settings.show',
-        'uses' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@show',
-        'controller' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@show',
+        'as' => 'whatwedo.show',
+        'uses' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@show',
+        'controller' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@show',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 
@@ -3273,14 +3273,14 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'settings.edit' => 
+    'whatwedo.edit' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'admin/settings/{setting}/edit',
+      'uri' => 'admin/whatwedo/{whatwedo}/edit',
       'action' => 
       array (
         'middleware' => 
@@ -3288,9 +3288,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:admin',
         ),
-        'as' => 'settings.edit',
-        'uses' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@edit',
-        'controller' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@edit',
+        'as' => 'whatwedo.edit',
+        'uses' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@edit',
+        'controller' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@edit',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 
@@ -3310,14 +3310,14 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'settings.update' => 
+    'whatwedo.update' => 
     array (
       'methods' => 
       array (
         0 => 'PUT',
         1 => 'PATCH',
       ),
-      'uri' => 'admin/settings/{setting}',
+      'uri' => 'admin/whatwedo/{whatwedo}',
       'action' => 
       array (
         'middleware' => 
@@ -3325,9 +3325,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:admin',
         ),
-        'as' => 'settings.update',
-        'uses' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@update',
-        'controller' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@update',
+        'as' => 'whatwedo.update',
+        'uses' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@update',
+        'controller' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@update',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 
@@ -3347,13 +3347,13 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'settings.destroy' => 
+    'whatwedo.destroy' => 
     array (
       'methods' => 
       array (
         0 => 'DELETE',
       ),
-      'uri' => 'admin/settings/{setting}',
+      'uri' => 'admin/whatwedo/{whatwedo}',
       'action' => 
       array (
         'middleware' => 
@@ -3361,9 +3361,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:admin',
         ),
-        'as' => 'settings.destroy',
-        'uses' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@destroy',
-        'controller' => 'App\\Http\\Controllers\\Admin\\SiteSettingsController@destroy',
+        'as' => 'whatwedo.destroy',
+        'uses' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@destroy',
+        'controller' => 'App\\Http\\Controllers\\Admin\\WhatWeDoController@destroy',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 

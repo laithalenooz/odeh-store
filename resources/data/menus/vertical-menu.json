@@ -27,9 +27,9 @@
       "icon": "users"
     },
     {
-      "url": "/admin/settings",
-      "name": "Settings",
-      "slug": "settings",
+      "url": "/admin/whatwedo",
+      "name": "What We Do",
+      "slug": "what-we-do",
       "icon": "settings"
     },
     {

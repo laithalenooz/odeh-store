@@ -21,7 +21,7 @@
       <div class="tab-content">
         <div class="tab-pane active fade show" id="account" aria-labelledby="account-tab" role="tabpanel">
             <!-- settings form start -->
-            <form action="{{route('settings.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('whatwedo.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
                 <div class="row">

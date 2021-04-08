@@ -18,7 +18,7 @@
     <div class="card">
       <div class="card-body">
         <div class="col-12 d-flex align-items-center justify-content-end pb-1">
-          <a href="{{route('settings.create')}}" class="btn btn-sm btn-success">Add setting</a>
+          <a href="{{route('whatwedo.create')}}" class="btn btn-sm btn-success">Create</a>
         </div>
         <!-- datatable start -->
         <div class="table-responsive">
@@ -34,15 +34,15 @@
               </tr>
             </thead>
             <tbody>
-                @foreach ($settings as $setting)
+                @foreach ($whatwedos as $whatwedo)
                     <tr>
-                        <td>{{$setting->id}}</td>
-                        <td>{{$setting->whatWeDo}}</td>
-                        <td>{{$setting->weSell}}</td>
-                        <td>{{$setting->weBuy}}</td>
-                        <td><img src="{{Storage::disk('public')->url($setting->image)}}" width="45" height="45" alt="{{Storage::disk('public')->url($setting->image)}}"></td>
-                        <td><a href="{{route('settings.edit', $setting)}}"><i class="bx bx-edit-alt"></i></a> | <a onclick="event.preventDefault(); document.getElementById('setting-delete-form').submit()"><i class="bx bx-trash-alt danger"></i></a>
-                          <form id="setting-delete-form" action="{{ route('settings.destroy', $setting['id']) }}" method="POST" class="d-none">
+                        <td>{{$whatwedo->id}}</td>
+                        <td>{{$whatwedo->whatWeDo}}</td>
+                        <td>{{$whatwedo->weSell}}</td>
+                        <td>{{$whatwedo->weBuy}}</td>
+                        <td><img src="{{Storage::disk('public')->url($whatwedo->image)}}" width="45" height="45" alt="{{Storage::disk('public')->url($whatwedo->image)}}"></td>
+                        <td><a href="{{route('whatwedo.edit', $whatwedo)}}"><i class="bx bx-edit-alt"></i></a> | <a onclick="event.preventDefault(); document.getElementById('setting-delete-form').submit()"><i class="bx bx-trash-alt danger"></i></a>
+                          <form id="setting-delete-form" action="{{ route('whatwedo.destroy', $whatwedo['id']) }}" method="POST" class="d-none">
                             @method('DELETE')
                             @csrf
                           </form>

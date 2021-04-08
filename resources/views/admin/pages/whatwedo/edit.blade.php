@@ -21,7 +21,7 @@
       <div class="tab-content">
         <div class="tab-pane active fade show" id="account" aria-labelledby="account-tab" role="tabpanel">
             <!-- products form start -->
-            <form action="{{route('settings.update',$setting)}}" method="POST" autocomplete="off">
+            <form action="{{route('whatwedo.update', $whatwedo)}}" method="POST" autocomplete="off">
                 @csrf
                 @method('PUT')
                 <div class="row">
@@ -29,7 +29,7 @@
                       <div class="form-group">
                         <div class="controls">
                             <label>What We Do</label>
-                            <textarea value="{{$setting->whatWeDo}}" class="ckeditor" required class="form-control" placeholder="Who We Are" name="whatWeDo"></textarea>
+                            <textarea value="{{$whatwedo->whatWeDo}}" class="ckeditor" required class="form-control" placeholder="Who We Are" name="whatWeDo"></textarea>
                             @if ($errors->has('whatWeDo'))
                                 <span class="text-danger">{{ $errors->first('whatWeDo') }}</span>
                             @endif
@@ -40,7 +40,7 @@
                       <div class="form-group">
                         <div class="controls">
                             <label>We Sell</label>
-                            <textarea value="{{$setting->weSEll}}" class="ckeditor" required class="form-control" placeholder="We Sell" name="weSell"></textarea>
+                            <textarea value="{{$whatwedo->weSEll}}" class="ckeditor" required class="form-control" placeholder="We Sell" name="weSell"></textarea>
                             @if ($errors->has('weSell'))
                                 <span class="text-danger">{{ $errors->first('weSell') }}</span>
                             @endif
@@ -51,7 +51,7 @@
                       <div class="form-group">
                         <div class="controls">
                             <label>We Buy</label>
-                            <textarea value="{{$setting->weBuy}}" class="ckeditor" required class="form-control" placeholder="We Buy" name="weBuy"></textarea>
+                            <textarea value="{{$whatwedo->weBuy}}" class="ckeditor" required class="form-control" placeholder="We Buy" name="weBuy"></textarea>
                             @if ($errors->has('weBuy'))
                                 <span class="text-danger">{{ $errors->first('weBuy') }}</span>
                             @endif

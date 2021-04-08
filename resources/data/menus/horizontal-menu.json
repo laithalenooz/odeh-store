@@ -29,9 +29,9 @@
       "dropdown": "1"
     },
     {
-      "url": "/admin/settings",
-      "name": "Settings",
-      "slug": "Settings",
+      "url": "/admin/whatwedo",
+      "name": "What We Do",
+      "slug": "what-we-do",
       "icon": "bx bx-settings",
       "dropdown": "1"
     },

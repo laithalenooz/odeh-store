@@ -8,7 +8,7 @@ use App\Http\Controllers\Admin\FrontController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\SiteSettingsController;
+use App\Http\Controllers\Admin\WhatWeDoController;
 use App\Http\Controllers\Admin\TermsAndConditionsController;
 use App\Http\Controllers\Admin\BrandsController;
 
@@ -33,7 +33,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('users', UserController::class);
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);
-    Route::resource('settings', SiteSettingsController::class);
+    Route::resource('whatwedo', WhatWeDoController::class);
     Route::resource('termsandconditions', TermsAndConditionsController::class);
     Route::resource('brands', BrandsController::class);
   });
