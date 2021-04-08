@@ -84,7 +84,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::kmRsrTdEr9uHlEpj',
+            '_route' => 'generated::HZfDc1BU1xQNI2KT',
           ),
           1 => NULL,
           2 => 
@@ -121,7 +121,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::r5Cck0vuRUpTVQk5',
+            '_route' => 'generated::ABMkWmbvoBM2kdbf',
           ),
           1 => NULL,
           2 => 
@@ -176,7 +176,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::jVSOWhQGyUtEH50I',
+            '_route' => 'generated::O24A9dmVR5YddAUy',
           ),
           1 => NULL,
           2 => 
@@ -267,7 +267,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::MmIJ6GuA6dOEHBKE',
+            '_route' => 'generated::ICyV8mfiACjz1z44',
           ),
           1 => NULL,
           2 => 
@@ -674,10 +674,66 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/admin/brands' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'brands.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'brands.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/brands/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'brands.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/_debugbar/(?|c(?|lockwork/([^/]++)(*:42)|ache/([^/]++)(?:/([^/]++))?(*:76))|telescope/([^/]++)(*:102))|/lang/([^/]++)(*:125)|/password/reset/([^/]++)(*:157)|/email/verify/([^/]++)/([^/]++)(*:196)|/admin/(?|users/([^/]++)(?|(*:231)|/edit(*:244)|(*:252))|categories/([^/]++)(?|(*:283)|/edit(*:296)|(*:304))|products/([^/]++)(?|(*:333)|/edit(*:346)|(*:354))|settings/([^/]++)(?|(*:383)|/edit(*:396)|(*:404))|termsandconditions/([^/]++)(?|(*:443)|/edit(*:456)|(*:464))))/?$}sDu',
+      0 => '{^(?|/_debugbar/(?|c(?|lockwork/([^/]++)(*:42)|ache/([^/]++)(?:/([^/]++))?(*:76))|telescope/([^/]++)(*:102))|/lang/([^/]++)(*:125)|/password/reset/([^/]++)(*:157)|/email/verify/([^/]++)/([^/]++)(*:196)|/admin/(?|users/([^/]++)(?|(*:231)|/edit(*:244)|(*:252))|categories/([^/]++)(?|(*:283)|/edit(*:296)|(*:304))|products/([^/]++)(?|(*:333)|/edit(*:346)|(*:354))|settings/([^/]++)(?|(*:383)|/edit(*:396)|(*:404))|termsandconditions/([^/]++)(?|(*:443)|/edit(*:456)|(*:464))|brands/([^/]++)(?|(*:491)|/edit(*:504)|(*:512))))/?$}sDu',
     ),
     3 => 
     array (
@@ -1260,6 +1316,94 @@ app('router')->setCompiledRoutes(
           5 => true,
           6 => NULL,
         ),
+      ),
+      491 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'brands.show',
+          ),
+          1 => 
+          array (
+            0 => 'brand',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      504 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'brands.edit',
+          ),
+          1 => 
+          array (
+            0 => 'brand',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      512 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'brands.update',
+          ),
+          1 => 
+          array (
+            0 => 'brand',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'brands.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'brand',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
         2 => 
         array (
           0 => NULL,
@@ -1497,7 +1641,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::kmRsrTdEr9uHlEpj' => 
+    'generated::HZfDc1BU1xQNI2KT' => 
     array (
       'methods' => 
       array (
@@ -1512,15 +1656,15 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'auth:api',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":291:{@ST601whQjKos3Q8PxorWX5z9fr/quVHWuV8F6mOCM4w=.a:5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":291:{@TgBLTZR6FHoDh7eX9WEM/i1NEv38STTRvZXI8OcIBwU=.a:5:{s:3:"use";a:0:{}s:8:"function";s:79:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000004113e736000000004284df91";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"0000000022c8ab4a0000000036d7a455";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::kmRsrTdEr9uHlEpj',
+        'as' => 'generated::HZfDc1BU1xQNI2KT',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1607,7 +1751,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::r5Cck0vuRUpTVQk5' => 
+    'generated::ABMkWmbvoBM2kdbf' => 
     array (
       'methods' => 
       array (
@@ -1627,7 +1771,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::r5Cck0vuRUpTVQk5',
+        'as' => 'generated::ABMkWmbvoBM2kdbf',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1713,7 +1857,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::jVSOWhQGyUtEH50I' => 
+    'generated::O24A9dmVR5YddAUy' => 
     array (
       'methods' => 
       array (
@@ -1733,7 +1877,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::jVSOWhQGyUtEH50I',
+        'as' => 'generated::O24A9dmVR5YddAUy',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1926,7 +2070,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::MmIJ6GuA6dOEHBKE' => 
+    'generated::ICyV8mfiACjz1z44' => 
     array (
       'methods' => 
       array (
@@ -1946,7 +2090,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::MmIJ6GuA6dOEHBKE',
+        'as' => 'generated::ICyV8mfiACjz1z44',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3477,6 +3621,263 @@ app('router')->setCompiledRoutes(
         'as' => 'termsandconditions.destroy',
         'uses' => 'App\\Http\\Controllers\\Admin\\TermsAndConditionsController@destroy',
         'controller' => 'App\\Http\\Controllers\\Admin\\TermsAndConditionsController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'brands.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/brands',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:admin',
+        ),
+        'as' => 'brands.index',
+        'uses' => 'App\\Http\\Controllers\\Admin\\BrandsController@index',
+        'controller' => 'App\\Http\\Controllers\\Admin\\BrandsController@index',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'brands.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/brands/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:admin',
+        ),
+        'as' => 'brands.create',
+        'uses' => 'App\\Http\\Controllers\\Admin\\BrandsController@create',
+        'controller' => 'App\\Http\\Controllers\\Admin\\BrandsController@create',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'brands.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/brands',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:admin',
+        ),
+        'as' => 'brands.store',
+        'uses' => 'App\\Http\\Controllers\\Admin\\BrandsController@store',
+        'controller' => 'App\\Http\\Controllers\\Admin\\BrandsController@store',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'brands.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/brands/{brand}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:admin',
+        ),
+        'as' => 'brands.show',
+        'uses' => 'App\\Http\\Controllers\\Admin\\BrandsController@show',
+        'controller' => 'App\\Http\\Controllers\\Admin\\BrandsController@show',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'brands.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/brands/{brand}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:admin',
+        ),
+        'as' => 'brands.edit',
+        'uses' => 'App\\Http\\Controllers\\Admin\\BrandsController@edit',
+        'controller' => 'App\\Http\\Controllers\\Admin\\BrandsController@edit',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'brands.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'admin/brands/{brand}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:admin',
+        ),
+        'as' => 'brands.update',
+        'uses' => 'App\\Http\\Controllers\\Admin\\BrandsController@update',
+        'controller' => 'App\\Http\\Controllers\\Admin\\BrandsController@update',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'brands.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'admin/brands/{brand}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:admin',
+        ),
+        'as' => 'brands.destroy',
+        'uses' => 'App\\Http\\Controllers\\Admin\\BrandsController@destroy',
+        'controller' => 'App\\Http\\Controllers\\Admin\\BrandsController@destroy',
         'namespace' => NULL,
         'prefix' => '/admin',
         'where' => 

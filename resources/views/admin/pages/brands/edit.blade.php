@@ -1,6 +1,6 @@
 @extends('admin.layouts.contentLayoutMaster')
 {{-- page title --}}
-@section('title','Privacy and Terms Edit')
+@section('title','Brand Edit')
 {{-- vendor styles --}}
 @section('vendor-styles')
 <link rel="stylesheet" type="text/css" href="{{asset('css/plugins/forms/validation/form-validation.css')}}">
@@ -14,38 +14,49 @@
 @endsection
 
 @section('content')
-<!-- Privacy and Terms edit start -->
+<!-- Brand edit start -->
 <section class="users-edit mt-5">
   <div class="card">
     <div class="card-body">
       <div class="tab-content">
         <div class="tab-pane active fade show" id="account" aria-labelledby="account-tab" role="tabpanel">
-            <!-- Privacy and Terms form start -->
-            <form action="{{route('termsandconditions.update', $termsandcondition)}}" method="POST" autocomplete="off">
+            <!-- Brand form start -->
+            <form action="{{route('brands.update', $brand)}}" method="POST" autocomplete="off">
                 @csrf
                 @method('PUT')
                 <div class="row">
-                  <div class="col-12 col-sm-6">
+                  <div class="col-12 col-sm-4">
                       <div class="form-group">
                         <div class="controls">
-                            <label>Brand</label>
-                            <textarea value="{{old('terms')}}" class="ckeditor" required class="form-control" placeholder="Brand" name="terms"></textarea>
-                            @if ($errors->has('terms'))
-                                <span class="text-danger">{{ $errors->first('terms') }}</span>
+                            <label>Brand Name</label>
+                            <input value="{{$brand->name}}" required class="form-control" placeholder="Brand Name" name="name">
+                            @if ($errors->has('name'))
+                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                            @endif
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-sm-10">
+                      <div class="form-group">
+                        <div class="controls">
+                            <label>About the Brand</label>
+                            <textarea value="{{old('about')}}" class="ckeditor" required class="form-control" placeholder="Abou the Brand" name="about"></textarea>
+                            @if ($errors->has('about'))
+                                <span class="text-danger">{{ $errors->first('about') }}</span>
                             @endif
                         </div>
                       </div>
                   </div>
                   <div class="col-12 col-sm-6">
-                      <div class="form-group">
-                        <div class="controls">
-                            <label>Privacy Policy</label>
-                            <textarea value="{{old('privacy')}}" class="ckeditor" required class="form-control" placeholder="Privacy Policy" name="privacy"></textarea>
-                            @if ($errors->has('privacy'))
-                                <span class="text-danger">{{ $errors->first('privacy') }}</span>
-                            @endif
-                        </div>
+                    <div class="form-group">
+                      <div class="controls">
+                        <label>Image</label>
+                        <input type="file" class="form-control" placeholder="IMAGE" name="image">
+                        @if ($errors->has('image'))
+                          <span class="text-danger">{{ $errors->first('image') }}</span>
+                        @endif
                       </div>
+                    </div>
                   </div>
                   <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                       <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
@@ -54,13 +65,13 @@
                   </div>
                 </div>
             </form>
-            <!-- Privacy and Terms form ends -->
+            <!-- Brand form ends -->
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Privacy and Terms edit ends -->
+<!-- Brand edit ends -->
 @endsection
 
 {{-- vendor scripts --}}

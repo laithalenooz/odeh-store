@@ -58,43 +58,48 @@ class BrandsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Brands  $brands
+     * @param  \App\Models\Brands  $brand
      * @return \Illuminate\Http\Response
      */
-    public function edit(Brands $brands)
+    public function edit(Brands $brand)
     {
-        return view('admin.pages.brands.edit',compact('brands'));
+        return view('admin.pages.brands.edit',compact('brand'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Brands  $brands
+     * @param  \App\Models\Brands  $brand
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Brands $brands)
+    public function update(Request $request, Brands $brand)
     {
       $data = $request->all();
       if ($data['image'] == null)
       {
-        $data['image'] = $brands->image;
+        $data['image'] = $brand->image;
       } else {
         $data['image'] = Storage::disk('public')->put('brands', $data['image']);
       }
-      $brands->update($data);
+
+      if ($data['about'] == null) {
+          $data['about'] = $brand->about;
+      }
+
+      $brand->update($data);
       return redirect()->route('brands.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Brands  $brands
+     * @param  \App\Models\Brands  $brand
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Brands $brands)
+    public function destroy(Brands $brand)
     {
-        $brands->delete();
+        $brand->delete();
         return back();
     }
 }

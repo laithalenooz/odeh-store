@@ -18,7 +18,7 @@
     <div class="card">
       <div class="card-body">
         <div class="col-12 d-flex align-items-center justify-content-end pb-1">
-          <a href="{{route('brands.create')}}" class="btn btn-sm btn-success">Add Privacy & Terms</a>
+          <a href="{{route('brands.create')}}" class="btn btn-sm btn-success">Add a Brand</a>
         </div>
         <!-- datatable start -->
         <div class="table-responsive">

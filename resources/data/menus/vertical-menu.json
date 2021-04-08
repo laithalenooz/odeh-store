@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "url": "/",
+      "url": "/admin",
       "name": "Dashboard",
       "slug": "dashboard",
       "icon": "desktop",
@@ -35,7 +35,13 @@
     {
       "url": "/admin/termsandconditions",
       "name": "Privacy and Terms",
-      "slug": "privacy and terms",
+      "slug": "privacy-and-terms",
+      "icon": "settings"
+    },
+    {
+      "url": "/admin/brands",
+      "name": "Brands and Information",
+      "slug": "brands-and-information",
       "icon": "settings"
     }
   ]
