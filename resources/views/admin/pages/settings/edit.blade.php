@@ -21,17 +21,17 @@
       <div class="tab-content">
         <div class="tab-pane active fade show" id="account" aria-labelledby="account-tab" role="tabpanel">
             <!-- products form start -->
-            <form action="{{route('products.update',$product)}}" method="POST" autocomplete="off">
+            <form action="{{route('settings.update',$setting)}}" method="POST" autocomplete="off">
                 @csrf
                 @method('PUT')
                 <div class="row">
                   <div class="col-12 col-sm-6">
                       <div class="form-group">
                         <div class="controls">
-                            <label>Name</label>
-                            <input type="text" value="{{$product->name}}" required class="form-control" placeholder="Name" name="name">
-                            @if ($errors->has('name'))
-                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                            <label>What We Do</label>
+                            <textarea value="{{$setting->whatWeDo}}" class="ckeditor" required class="form-control" placeholder="Who We Are" name="whatWeDo"></textarea>
+                            @if ($errors->has('whatWeDo'))
+                                <span class="text-danger">{{ $errors->first('whatWeDo') }}</span>
                             @endif
                         </div>
                       </div>
@@ -39,41 +39,25 @@
                   <div class="col-12 col-sm-6">
                       <div class="form-group">
                         <div class="controls">
-                            <label>Description</label>
-                            <input type="text" value="{{$product->description}}" required class="form-control" placeholder="Name" name="description">
-                            @if ($errors->has('description'))
-                                <span class="text-danger">{{ $errors->first('description') }}</span>
+                            <label>We Sell</label>
+                            <textarea value="{{$setting->weSEll}}" class="ckeditor" required class="form-control" placeholder="We Sell" name="weSell"></textarea>
+                            @if ($errors->has('weSell'))
+                                <span class="text-danger">{{ $errors->first('weSell') }}</span>
                             @endif
                         </div>
                       </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
+                  </div>
+                  <div class="col-12 col-sm-6">
                       <div class="form-group">
                         <div class="controls">
-                            <label>Description</label>
-                            <select required class="form-control" placeholder="Category" name="category">
-                              <option value="{{ $product->category->name }}">{{ $product->category->name }}</option>
-                              @foreach(App\Models\Category::all() as $category)
-                              <option value="{{ $category->name }}">{{ $category->name }}</option>
-                              @endforeach
-                            </select>
-                            @if ($errors->has('category'))
-                                <span class="text-danger">{{ $errors->first('category') }}</span>
+                            <label>We Buy</label>
+                            <textarea value="{{$setting->weBuy}}" class="ckeditor" required class="form-control" placeholder="We Buy" name="weBuy"></textarea>
+                            @if ($errors->has('weBuy'))
+                                <span class="text-danger">{{ $errors->first('weBuy') }}</span>
                             @endif
                         </div>
                       </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                      <div class="form-group">
-                        <div class="controls">
-                            <label>Price</label>
-                            <input type="text" value="${{$product->price}}" required class="form-control" placeholder="Price" name="price">
-                            @if ($errors->has('price'))
-                                <span class="text-danger">{{ $errors->first('price') }}</span>
-                            @endif
-                        </div>
-                      </div>
-                    </div>
+                  </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
                       <div class="controls">
@@ -111,6 +95,12 @@
 
 {{-- page scripts --}}
 @section('page-scripts')
+<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
 <script src="{{asset('js/scripts/pages/app-users.js')}}"></script>
 <script src="{{asset('js/scripts/navs/navs.js')}}"></script>
 @endsection

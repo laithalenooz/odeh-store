@@ -1,6 +1,6 @@
 @extends('admin.layouts.contentLayoutMaster')
 {{-- page title --}}
-@section('title','settings List')
+@section('title','Privacy and Terms List')
 {{-- vendor styles --}}
 @section('vendor-styles')
 <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/tables/datatable/dataTables.bootstrap4.min.css')}}">
@@ -12,37 +12,33 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/pages/app-users.css')}}">
 @endsection
 @section('content')
-<!-- settings list start -->
+<!-- Privacy and Terms list start -->
 <section class="users-list-wrapper">
   <div class="users-list-table">
     <div class="card">
       <div class="card-body">
         <div class="col-12 d-flex align-items-center justify-content-end pb-1">
-          <a href="{{route('settings.create')}}" class="btn btn-sm btn-success">Add setting</a>
+          <a href="{{route('termsandconditions.create')}}" class="btn btn-sm btn-success">Add Privacy & Terms</a>
         </div>
         <!-- datatable start -->
         <div class="table-responsive">
-          <table id="settings-list-datatable" class="table">
+          <table id="Privacy and Terms-list-datatable" class="table">
             <thead>
               <tr>
                 <th>id</th>
-                <th>What We Do</th>
-                <th>We Sell</th>
-                <th>We Buy</th>
-                <th>Image</th>
+                <th>Terms</th>
+                <th>Privacy</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-                @foreach ($settings as $setting)
+                @foreach ($PrivacyAndTerms as $PrivacyAndTerm)
                     <tr>
-                        <td>{{$setting->id}}</td>
-                        <td>{{$setting->whatWeDo}}</td>
-                        <td>{{$setting->weSell}}</td>
-                        <td>{{$setting->weBuy}}</td>
-                        <td><img src="{{Storage::disk('public')->url($setting->image)}}" width="45" height="45" alt="{{Storage::disk('public')->url($setting->image)}}"></td>
-                        <td><a href="{{route('settings.edit', $setting)}}"><i class="bx bx-edit-alt"></i></a> | <a onclick="event.preventDefault(); document.getElementById('setting-delete-form').submit()"><i class="bx bx-trash-alt danger"></i></a>
-                          <form id="setting-delete-form" action="{{ route('settings.destroy', $setting['id']) }}" method="POST" class="d-none">
+                        <td>{{$PrivacyAndTerm->id}}</td>
+                        <td>{{$PrivacyAndTerm->terms}}</td>
+                        <td>{{$PrivacyAndTerm->privacy}}</td>
+                        <td><a href="{{route('termsandconditions.edit', $PrivacyAndTerm)}}"><i class="bx bx-edit-alt"></i></a> | <a onclick="event.preventDefault(); document.getElementById('PrivacyAndTerm-delete-form').submit()"><i class="bx bx-trash-alt danger"></i></a>
+                          <form id="PrivacyAndTerm-delete-form" action="{{ route('termsandconditions.destroy', $PrivacyAndTerm['id']) }}" method="POST" class="d-none">
                             @method('DELETE')
                             @csrf
                           </form>
@@ -57,7 +53,7 @@
     </div>
   </div>
 </section>
-<!-- settings list ends -->
+<!-- Privacy and Terms list ends -->
 @endsection
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

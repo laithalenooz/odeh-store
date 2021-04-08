@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Brands;
 use Illuminate\Http\Request;
-use App\Models\SiteSettings;
-use App\Http\Requests\StoreSettingsRequest;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\StoreBrandRequest;
 
-class SiteSettingsController extends Controller
+class BrandsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class SiteSettingsController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.settings.index')->with('settings', SiteSettings::paginate(20));
+        return view('admin.pages.brands.index')->with('brands', Brands::paginate(20));
     }
 
     /**
@@ -27,7 +27,7 @@ class SiteSettingsController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.settings.create');
+        return view('admin.pages.brands.create');
     }
 
     /**
@@ -36,21 +36,21 @@ class SiteSettingsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSettingsRequest $request)
+    public function store(StoreBrandRequest $request)
     {
       $data = $request->all();
-      $data['image'] = Storage::disk('public')->put('settings', $data['image']);
-      SiteSettings::create($data);
-      return redirect()->route('settings.index');
+      $data['image'] = Storage::disk('public')->put('brands', $data['image']);
+      Brands::create($data);
+      return redirect()->route('brands.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Brands $brands)
     {
         //
     }
@@ -58,43 +58,43 @@ class SiteSettingsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SiteSettings  $setting 
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function edit(SiteSettings $setting)
+    public function edit(Brands $brands)
     {
-        return view('admin.pages.settings.edit',compact('setting'));
+        return view('admin.pages.brands.edit',compact('brands'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\SiteSettings  $setting
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SiteSettings $setting)
+    public function update(Request $request, Brands $brands)
     {
-        $data = $request->all();
+      $data = $request->all();
       if ($data['image'] == null)
       {
-        $data['image'] = $setting->image;
+        $data['image'] = $brands->image;
       } else {
-        $data['image'] = Storage::disk('public')->put('settings', $data['image']);
+        $data['image'] = Storage::disk('public')->put('brands', $data['image']);
       }
-      $setting->update($data);
-      return redirect()->route('settings.index');
+      $brands->update($data);
+      return redirect()->route('brands.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SiteSettings  $setting
+     * @param  \App\Models\Brands  $brands
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SiteSettings $setting)
+    public function destroy(Brands $brands)
     {
-        $setting->delete();
+        $brands->delete();
         return back();
     }
 }

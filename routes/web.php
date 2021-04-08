@@ -9,7 +9,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SiteSettingsController;
-
+use App\Http\Controllers\Admin\TermsAndConditionsController;
+use App\Http\Controllers\Admin\BrandsController;
 
 // locale Route
 Route::get('lang/{locale}', [LanguageController::class, 'swap'])->name('language');
@@ -33,6 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);
     Route::resource('settings', SiteSettingsController::class);
-
+    Route::resource('termsandconditions', TermsAndConditionsController::class);
+    Route::resource('brands', BrandsController::class);
   });
 });

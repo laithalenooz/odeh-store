@@ -31,6 +31,12 @@
       "name": "Settings",
       "slug": "settings",
       "icon": "settings"
+    },
+    {
+      "url": "/admin/termsandconditions",
+      "name": "Privacy and Terms",
+      "slug": "privacy and terms",
+      "icon": "settings"
     }
   ]
 }

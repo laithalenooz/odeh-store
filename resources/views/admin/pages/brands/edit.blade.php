@@ -1,6 +1,6 @@
 @extends('admin.layouts.contentLayoutMaster')
 {{-- page title --}}
-@section('title','settings Create')
+@section('title','Privacy and Terms Edit')
 {{-- vendor styles --}}
 @section('vendor-styles')
 <link rel="stylesheet" type="text/css" href="{{asset('css/plugins/forms/validation/form-validation.css')}}">
@@ -14,24 +14,24 @@
 @endsection
 
 @section('content')
-<!-- settings create start -->
+<!-- Privacy and Terms edit start -->
 <section class="users-edit mt-5">
   <div class="card">
     <div class="card-body">
       <div class="tab-content">
         <div class="tab-pane active fade show" id="account" aria-labelledby="account-tab" role="tabpanel">
-            <!-- settings form start -->
-            <form action="{{route('settings.store')}}" method="POST" enctype="multipart/form-data">
+            <!-- Privacy and Terms form start -->
+            <form action="{{route('termsandconditions.update', $termsandcondition)}}" method="POST" autocomplete="off">
                 @csrf
-                @method('POST')
+                @method('PUT')
                 <div class="row">
                   <div class="col-12 col-sm-6">
                       <div class="form-group">
                         <div class="controls">
-                            <label>What We Do</label>
-                            <textarea value="{{old('whatWeDo')}}" class="ckeditor" required class="form-control" placeholder="Who We Are" name="whatWeDo"></textarea>
-                            @if ($errors->has('whatWeDo'))
-                                <span class="text-danger">{{ $errors->first('whatWeDo') }}</span>
+                            <label>Brand</label>
+                            <textarea value="{{old('terms')}}" class="ckeditor" required class="form-control" placeholder="Brand" name="terms"></textarea>
+                            @if ($errors->has('terms'))
+                                <span class="text-danger">{{ $errors->first('terms') }}</span>
                             @endif
                         </div>
                       </div>
@@ -39,35 +39,13 @@
                   <div class="col-12 col-sm-6">
                       <div class="form-group">
                         <div class="controls">
-                            <label>We Sell</label>
-                            <textarea value="{{old('weSell')}}" class="ckeditor" required class="form-control" placeholder="We Sell" name="weSell"></textarea>
-                            @if ($errors->has('weSell'))
-                                <span class="text-danger">{{ $errors->first('weSell') }}</span>
+                            <label>Privacy Policy</label>
+                            <textarea value="{{old('privacy')}}" class="ckeditor" required class="form-control" placeholder="Privacy Policy" name="privacy"></textarea>
+                            @if ($errors->has('privacy'))
+                                <span class="text-danger">{{ $errors->first('privacy') }}</span>
                             @endif
                         </div>
                       </div>
-                  </div>
-                  <div class="col-12 col-sm-6">
-                      <div class="form-group">
-                        <div class="controls">
-                            <label>We Buy</label>
-                            <textarea value="{{old('weBuy')}}" class="ckeditor" required class="form-control" placeholder="We Buy" name="weBuy"></textarea>
-                            @if ($errors->has('weBuy'))
-                                <span class="text-danger">{{ $errors->first('weBuy') }}</span>
-                            @endif
-                        </div>
-                      </div>
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <div class="form-group">
-                      <div class="controls">
-                        <label>Image</label>
-                        <input type="file" class="form-control" placeholder="IMAGE" name="image">
-                        @if ($errors->has('image'))
-                          <span class="text-danger">{{ $errors->first('image') }}</span>
-                        @endif
-                      </div>
-                    </div>
                   </div>
                   <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                       <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
@@ -76,13 +54,13 @@
                   </div>
                 </div>
             </form>
-            <!-- settings form ends -->
+            <!-- Privacy and Terms form ends -->
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- settings ends -->
+<!-- Privacy and Terms edit ends -->
 @endsection
 
 {{-- vendor scripts --}}

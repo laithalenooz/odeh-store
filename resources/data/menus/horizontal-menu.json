@@ -34,6 +34,13 @@
       "slug": "Settings",
       "icon": "bx bx-settings",
       "dropdown": "1"
+    },
+    {
+      "url": "/admin/termsandconditions",
+      "name": "Privacy and Terms",
+      "slug": "privacy and terms",
+      "icon": "bx bx-settings",
+      "dropdown": "1"
     }
   ]
 }

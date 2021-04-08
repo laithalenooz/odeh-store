@@ -1,6 +1,6 @@
 @extends('admin.layouts.contentLayoutMaster')
 {{-- page title --}}
-@section('title','settings List')
+@section('title','Brands List')
 {{-- vendor styles --}}
 @section('vendor-styles')
 <link rel="stylesheet" type="text/css" href="{{asset('vendors/css/tables/datatable/dataTables.bootstrap4.min.css')}}">
@@ -12,37 +12,35 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/pages/app-users.css')}}">
 @endsection
 @section('content')
-<!-- settings list start -->
+<!-- Brands list start -->
 <section class="users-list-wrapper">
   <div class="users-list-table">
     <div class="card">
       <div class="card-body">
         <div class="col-12 d-flex align-items-center justify-content-end pb-1">
-          <a href="{{route('settings.create')}}" class="btn btn-sm btn-success">Add setting</a>
+          <a href="{{route('brands.create')}}" class="btn btn-sm btn-success">Add Privacy & Terms</a>
         </div>
         <!-- datatable start -->
         <div class="table-responsive">
-          <table id="settings-list-datatable" class="table">
+          <table id="Brands-list-datatable" class="table">
             <thead>
               <tr>
                 <th>id</th>
-                <th>What We Do</th>
-                <th>We Sell</th>
-                <th>We Buy</th>
+                <th>Name</th>
+                <th>About</th>
                 <th>Image</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-                @foreach ($settings as $setting)
+                @foreach ($brands as $brand)
                     <tr>
-                        <td>{{$setting->id}}</td>
-                        <td>{{$setting->whatWeDo}}</td>
-                        <td>{{$setting->weSell}}</td>
-                        <td>{{$setting->weBuy}}</td>
-                        <td><img src="{{Storage::disk('public')->url($setting->image)}}" width="45" height="45" alt="{{Storage::disk('public')->url($setting->image)}}"></td>
-                        <td><a href="{{route('settings.edit', $setting)}}"><i class="bx bx-edit-alt"></i></a> | <a onclick="event.preventDefault(); document.getElementById('setting-delete-form').submit()"><i class="bx bx-trash-alt danger"></i></a>
-                          <form id="setting-delete-form" action="{{ route('settings.destroy', $setting['id']) }}" method="POST" class="d-none">
+                        <td>{{$brand->id}}</td>
+                        <td>{{$brand->name}}</td>
+                        <td>{{$brand->about}}</td>
+                        <td><img src="{{Storage::disk('public')->url($brand->image)}}" width="45" height="45" alt="{{Storage::disk('public')->url($brand->image)}}"></td>
+                        <td><a href="{{route('brands.edit', $brand)}}"><i class="bx bx-edit-alt"></i></a> | <a onclick="event.preventDefault(); document.getElementById('brand-delete-form').submit()"><i class="bx bx-trash-alt danger"></i></a>
+                          <form id="brand-delete-form" action="{{ route('brands.destroy', $brand['id']) }}" method="POST" class="d-none">
                             @method('DELETE')
                             @csrf
                           </form>
@@ -57,7 +55,7 @@
     </div>
   </div>
 </section>
-<!-- settings list ends -->
+<!-- Brands list ends -->
 @endsection
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
