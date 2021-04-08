@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06d109ae-3f2e-43b1-a0bd-04faf288e0cb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/odeh-store.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/odeh-store.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BrandsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BrandsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    <list default="true" id="06d109ae-3f2e-43b1-a0bd-04faf288e0cb" name="Default Changelist" comment="fixed PHPStorm detection issue">
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617869537606</updated>
       <workItem from="1617869540110" duration="50000" />
-      <workItem from="1617887145535" duration="382000" />
+      <workItem from="1617887145535" duration="548000" />
     </task>
     <servers />
   </component>
@@ -193,5 +189,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed PHPStorm detection issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed PHPStorm detection issue" />
   </component>
 </project>
