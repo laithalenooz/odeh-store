@@ -41,4 +41,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 // Calculate CBM
-Route::post('/cbm', [App\Http\Controllers\Admin\ContainerCalculatorController::class, 'CBM']);
+Route::post('/cbm', [App\Http\Controllers\Admin\ContainerCalculatorController::class, 'CBM'])->name('CBM.equation');
