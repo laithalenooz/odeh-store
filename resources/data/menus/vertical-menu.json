@@ -49,6 +49,12 @@
       "name": "Partners and Information",
       "slug": "partners-and-information",
       "icon": "settings"
+    },
+    {
+      "url": "/admin/quotations",
+      "name": "Quotations",
+      "slug": "quotations",
+      "icon": "settings"
     }
   ]
 }

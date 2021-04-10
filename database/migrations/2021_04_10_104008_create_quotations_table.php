@@ -16,11 +16,13 @@ class CreateQuotationsTable extends Migration
         Schema::create('quotations', function (Blueprint $table) {
             $table->id();
             $table->string('companyName');
+            $table->string('contactName');
             $table->string('email');
             $table->string('mobile');
             $table->string('country');
             $table->string('city');
             $table->string('address');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

@@ -10,6 +10,6 @@ class Quotation extends Model
     use HasFactory;
 
     protected $fillable = [
-      'companyName', 'email', 'mobile', 'country', 'city', 'address'
+      'companyName', 'email', 'mobile', 'country', 'city', 'address', 'status'
     ];
 }

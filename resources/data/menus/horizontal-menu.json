@@ -55,6 +55,13 @@
       "slug": "partners-and-information",
       "icon": "bx bx-settings",
       "dropdown": "1"
+    },
+    {
+      "url": "/admin/quotations",
+      "name": "Quotations",
+      "slug": "quotations",
+      "icon": "bx bx-settings",
+      "dropdown": "1"
     }
   ]
 }
