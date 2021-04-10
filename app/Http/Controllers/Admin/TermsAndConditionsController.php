@@ -39,6 +39,8 @@ class TermsAndConditionsController extends Controller
   {
     $data = $request->all();
     PrivacyAndTerms::create($data);
+
+    toast('Terms and Privacy created!','success');
     return redirect()->route('termsandconditions.index');
   }
 
@@ -77,10 +79,12 @@ class TermsAndConditionsController extends Controller
     if ($data['privacy'] == null) {
       $data['privacy'] = $termsandcondition->privacy;
       $termsandcondition->update($data);
+      toast('Terms and Privacy updated!','success');
       return redirect()->route('termsandconditions.index');
     } elseif ($data['terms'] == null) {
       $data['terms'] = $termsandcondition->terms;
       $termsandcondition->update($data);
+      toast('Terms and Privacy updated!','success');
       return redirect()->route('termsandconditions.index');
     } else {
       $termsandcondition->update($data);
@@ -97,6 +101,7 @@ class TermsAndConditionsController extends Controller
   public function destroy(PrivacyAndTerms $termsandcondition)
   {
     $termsandcondition->delete();
+    toast('Terms and Privacy deleted!','success');
     return back();
   }
 }

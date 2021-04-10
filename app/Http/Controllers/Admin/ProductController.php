@@ -42,6 +42,8 @@ class ProductController extends Controller
     $data = $request->all();
     $data['image'] = Storage::disk('public')->put('products', $data['image']);
     Product::create($data);
+
+    toast('Product created successfully!','success');
     return redirect()->route('products.index');
   }
 
@@ -83,6 +85,8 @@ class ProductController extends Controller
       $data['image'] = Storage::disk('public')->put('products', $data['image']);
     }
     $product->update($data);
+
+    toast('Product updated!','success');
     return redirect()->route('products.index');
   }
 
@@ -95,6 +99,8 @@ class ProductController extends Controller
   public function destroy(Product $product)
   {
     $product->delete();
+
+    toast('Product deleted!','success');
     return back();
   }
 }

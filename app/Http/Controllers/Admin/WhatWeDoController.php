@@ -41,6 +41,8 @@ class WhatWeDoController extends Controller
     $data = $request->all();
     $data['image'] = Storage::disk('public')->put('settings', $data['image']);
     SiteSettings::create($data);
+
+    toast('Created successfully!','success');
     return redirect()->route('settings.index');
   }
 
@@ -82,6 +84,8 @@ class WhatWeDoController extends Controller
       $data['image'] = Storage::disk('public')->put('settings', $data['image']);
     }
     $setting->update($data);
+
+    toast('Updated successfully!','success');
     return redirect()->route('whatwedo.index');
   }
 
@@ -94,6 +98,8 @@ class WhatWeDoController extends Controller
   public function destroy(SiteSettings $whatwedo)
   {
     $whatwedo->delete();
+
+    toast('Successfully deleted!','success');
     return back();
   }
 }

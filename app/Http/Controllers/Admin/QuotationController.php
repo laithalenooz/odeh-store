@@ -5,10 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\QuotationRequest;
 use App\Models\Quotation;
-use App\Models\User;
-use App\Notifications\QuotationApproveNotification;
 use Illuminate\Http\Request;
-
+Use Alert;
 class QuotationController extends Controller
 {
   //  Request for Quotation form
@@ -84,6 +82,7 @@ class QuotationController extends Controller
 //    }
     $data = $request->all();
     $quotation->update($data);
+    toast('Status updated!','success');
     return redirect()->route('quotations.index');
   }
 

@@ -164,6 +164,7 @@ return [
     Spatie\Permission\PermissionServiceProvider::class,
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     Barryvdh\Debugbar\ServiceProvider::class,
+    RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
     /*
          * Package Service Providers...
@@ -230,6 +231,7 @@ return [
     'Validator' => Illuminate\Support\Facades\Validator::class,
     'View' => Illuminate\Support\Facades\View::class,
     'Helper' => App\Helpers\Helper::class,
+    'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
   ],
 
 ];

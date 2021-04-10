@@ -41,6 +41,8 @@ class PartnersController extends Controller
     $data = $request->all();
     $data['image'] = Storage::disk('public')->put('partners', $data['image']);
     Partner::create($data);
+
+    toast('Partner added successfully!','success');
     return redirect()->route('brands.index');
   }
 
@@ -87,6 +89,8 @@ class PartnersController extends Controller
     }
 
     $partner->update($data);
+
+    toast('Partner updated!','success');
     return redirect()->route('partners.index');
   }
 
@@ -99,6 +103,8 @@ class PartnersController extends Controller
   public function destroy(Partner $partner)
   {
     $partner->delete();
+
+    toast('Partner deleted!','success');
     return back();
   }
 }

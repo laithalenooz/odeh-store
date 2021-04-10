@@ -41,6 +41,8 @@ class BrandsController extends Controller
     $data = $request->all();
     $data['image'] = Storage::disk('public')->put('brands', $data['image']);
     Brands::create($data);
+
+    toast('Brand created successfully!','success');
     return redirect()->route('brands.index');
   }
 
@@ -87,6 +89,8 @@ class BrandsController extends Controller
     }
 
     $brand->update($data);
+
+    toast('Brand updated!','success');
     return redirect()->route('brands.index');
   }
 
@@ -99,6 +103,8 @@ class BrandsController extends Controller
   public function destroy(Brands $brand)
   {
     $brand->delete();
+
+    toast('Brand Deleted!','success');
     return back();
   }
 }

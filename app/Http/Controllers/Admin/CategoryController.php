@@ -41,6 +41,8 @@ class CategoryController extends Controller
     $data = $request->all();
     $data['image'] = Storage::disk('public')->put('categories', $data['image']);
     Category::create($data);
+
+    toast('Category created successfully!','success');
     return redirect()->route('categories.index');
   }
 
@@ -82,6 +84,8 @@ class CategoryController extends Controller
       $data['image'] = Storage::disk('public')->put('categories', $data['image']);
     }
     $category->update($data);
+
+    toast('Category updated!','success');
     return redirect()->route('categories.index');
   }
 
@@ -94,6 +98,8 @@ class CategoryController extends Controller
   public function destroy(Category $category)
   {
     $category->delete();
+
+    toast('Category deleted!','success');
     return back();
   }
 }
