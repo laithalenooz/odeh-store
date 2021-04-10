@@ -48,6 +48,13 @@
       "slug": "brands-and-information",
       "icon": "bx bx-settings",
       "dropdown": "1"
+    },
+    {
+      "url": "/admin/partners",
+      "name": "Partners and Information",
+      "slug": "partners-and-information",
+      "icon": "bx bx-settings",
+      "dropdown": "1"
     }
   ]
 }

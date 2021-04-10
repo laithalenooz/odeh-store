@@ -43,6 +43,12 @@
       "name": "Brands and Information",
       "slug": "brands-and-information",
       "icon": "settings"
+    },
+    {
+      "url": "/admin/partners",
+      "name": "Partners and Information",
+      "slug": "partners-and-information",
+      "icon": "settings"
     }
   ]
 }
